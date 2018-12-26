@@ -12,6 +12,7 @@ package com.vegetate.Algorithms;
 /**
  * 〈优先级队列〉
  *
+ *  优先级队列对插入的数据进行排序，放在合适的位置
  * @author vegetable
  * @create 2018/12/25 15:07
  * @since 1.0.0
