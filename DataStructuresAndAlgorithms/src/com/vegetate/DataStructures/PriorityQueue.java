@@ -1,3 +1,4 @@
+package com.vegetate.DataStructures;
 /**
  * FileName: PriorityQueue
  * Author:   vegetable

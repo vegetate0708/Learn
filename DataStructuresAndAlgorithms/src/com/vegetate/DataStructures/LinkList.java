@@ -1,3 +1,4 @@
+package com.vegetate.DataStructures;
 /**
  * FileName: LinkList
  * Author:   vegetable
@@ -16,7 +17,14 @@
  * @since 1.0.0
  */
 public class LinkList {
-   private void insert( ){
-
+   private Link first;
+   private void insert(long value){
+      Link link=new Link(value);
+      if(link==null){
+         first=link;
+      }else {
+         link.setNext(first);
+         first=link;
+      }
    }
 }
