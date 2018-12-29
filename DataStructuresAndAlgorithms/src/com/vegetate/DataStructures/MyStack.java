@@ -2,19 +2,18 @@
  * FileName: MyStack
  * Author:   vegetable
  * Date:     2018/12/24 15:44
- * Description: Õ»µÄ»ù±¾ÊµÏÖ
+ * Description: æ ˆçš„åŸºæœ¬å®ç°
  * History:
  * <author>          <time>          <version>          <desc>
- * ×÷ÕßĞÕÃû           ĞŞ¸ÄÊ±¼ä           °æ±¾ºÅ              ÃèÊö
+ * ä½œè€…å§“å           ä¿®æ”¹æ—¶é—´           ç‰ˆæœ¬å·              æè¿°
  */
-package com.vegetate.Algorithms;
 
 import java.util.Stack;
 
 /**
- * ¡´Õ»µÄ»ù±¾ÊµÏÖ¡µ
- *  Õ»µÄ»ù±¾¹¦ÄÜÊÇ ÏÈ½øºó³ö£¬ÀàËÆÍùÒ»¸ö±­×ÓÀïÃæµ¹ÈëÉ³×Ó£¬ÏÈ½øµÄÔÚµ×²¿£¬ºó½øµÄ¶¥²¿£¬È¡³öÊ±Ïà·´
- *  Ê¹ÓÃÕ»¿ÉÒÔ½øĞĞÒ»Ğ©ÄæÏòÅÅĞò¹¦ÄÜ
+ * ã€ˆæ ˆçš„åŸºæœ¬å®ç°ã€‰
+ *  æ ˆçš„åŸºæœ¬åŠŸèƒ½æ˜¯ å…ˆè¿›åå‡ºï¼Œç±»ä¼¼å¾€ä¸€ä¸ªæ¯å­é‡Œé¢å€’å…¥æ²™å­ï¼Œå…ˆè¿›çš„åœ¨åº•éƒ¨ï¼Œåè¿›çš„é¡¶éƒ¨ï¼Œå–å‡ºæ—¶ç›¸å
+ *  ä½¿ç”¨æ ˆå¯ä»¥è¿›è¡Œä¸€äº›é€†å‘æ’åºåŠŸèƒ½
  * @author vegetable
  * @create 2018/12/2415:44
  * @since 1.0.0
@@ -47,7 +46,7 @@ public class MyStack {
        if( !isEmpty()){
            return arr[top--];
        }else{
-           System.out.print("Õ»ÒÑÎª¿Õ");
+           System.out.print("Õ»ï¿½ï¿½Îªï¿½ï¿½");
            return 0;
        }
    }
@@ -62,7 +61,7 @@ public class MyStack {
         myStack.push(16);
 
         while (!myStack.isEmpty()){
-            System.out.println("È¡³öÊı¾İ"+myStack.pop());
+            System.out.println("È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+myStack.pop());
         }
 
    }

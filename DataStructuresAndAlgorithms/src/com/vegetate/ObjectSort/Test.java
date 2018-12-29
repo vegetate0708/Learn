@@ -2,10 +2,10 @@
  * FileName: Test
  * Author:   vegetable
  * Date:     2018/12/24 10:46
- * Description: Ñ§ÉúÅÅĞò²âÊÔÀà
+ * Description: å­¦ç”Ÿæ’åºæµ‹è¯•ç±»
  * History:
  * <author>          <time>          <version>          <desc>
- * ×÷ÕßĞÕÃû           ĞŞ¸ÄÊ±¼ä           °æ±¾ºÅ              ÃèÊö
+ * ä½œè€…å§“å           ä¿®æ”¹æ—¶é—´           ç‰ˆæœ¬å·              æè¿°
  */
 package com.vegetate.ObjectSort;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * ¡´Ñ§ÉúÅÅĞò²âÊÔÀà¡µ
+ * ã€ˆå­¦ç”Ÿæ’åºæµ‹è¯•ç±»ã€‰
  *
  * @author vegetable
  * @create 2018/12/2410:46
@@ -22,27 +22,27 @@ import java.util.Collections;
 public class Test {
     public static void main(String[] args){
         ArrayList<Student> students = new ArrayList<>();
-        students.add(new Student("ÁõÒ»", 19, 89));
-        students.add(new Student("¶¡¶ş", 26, 90));
-        students.add(new Student("ÍõÈı", 23, 70));
-        students.add(new Student("ÖÜÎå", 18, 80));
+        students.add(new Student("åˆ˜ä¸€", 19, 89));
+        students.add(new Student("ä¸äºŒ", 26, 90));
+        students.add(new Student("ç‹ä¸‰", 23, 70));
+        students.add(new Student("å‘¨äº”", 18, 80));
 
-        System.out.println("ÅÅĞòÇ°:");
+        System.out.println("æ’åºå‰:");
         for (Student student : students) {
-            System.out.println("ĞÕÃû£º"+student.name+" ÄêÁä£º"+student.age+" ³É¼¨£º"+student.score);
+            System.out.println("å§“åï¼š"+student.name+" å¹´é¾„ï¼š"+student.age+" æˆç»©ï¼š"+student.score);
         }
 
-//        // µÚÒ»ÖÖÅÅĞò·½·¨
+//        // ç¬¬ä¸€ç§æ’åºæ–¹æ³•
 //        Collections.sort(students);
 
-        //µÚ¶şÖÖÅÅĞò·½·¨
+        //ç¬¬äºŒç§æ’åºæ–¹æ³•
         StudentComparable sort =new StudentComparable();
-        StudentComparable.sortASC = true;//½µĞò
-        StudentComparable.sortByScore=true; //ÉèÖÃÅÅĞòÊôĞÔÉúĞ§
+        StudentComparable.sortASC = true;//é™åº
+        StudentComparable.sortByScore=true; //è®¾ç½®æ’åºå±æ€§ç”Ÿæ•ˆ
         Collections.sort(students,sort);
-        System.out.println("ÅÅĞòºó:");
+        System.out.println("æ’åºå:");
         for (Student student : students) {
-            System.out.println("ĞÕÃû£º"+student.name+" ÄêÁä£º"+student.age+" ³É¼¨£º"+student.score);
+            System.out.println("å§“åï¼š"+student.name+" å¹´é¾„ï¼š"+student.age+" æˆç»©ï¼š"+student.score);
         }
     }
 
