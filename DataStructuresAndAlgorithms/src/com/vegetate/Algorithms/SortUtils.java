@@ -19,8 +19,8 @@ public class SortUtils {
      */
     public static int[] bubbleort(int[] a){
         int m;
-         for(int i=0;i<a.length;i++){  //�������������
-             for(int j=0;j<a.length-i-1;j++){ //�ڲ������Ҫ������������(ÿһ��������ٴ�)
+         for(int i=0;i<a.length;i++){  //外层控制排序次数
+             for(int j=0;j<a.length-i-1;j++){ //内层控制需要排序的数字序号(每一次排序多少次)
                  m=a[j];
                  if( a[j]>a[j+1]){
                      a[j]=a[j+1];
@@ -43,8 +43,8 @@ public class SortUtils {
      */
     public static long[] selectSort(long[] a){
         long m;
-        for(int i=0;i<a.length-1;i++){  //������������� ���һ����a[length-2] a[length-1]
-            for(int j=i+1;j<a.length;j++){ //�ڲ������Ҫ������������(ÿһ��������ٴ�)
+        for(int i=0;i<a.length-1;i++){  //外层控制排序次数 最后一次是a[length-2] a[length-1]
+            for(int j=i+1;j<a.length;j++){ //内层控制需要排序的数字序号(每一次排序多少次)
                 if( a[i]>a[j]){
                     m=a[i];
                     a[i]=a[j];
@@ -66,9 +66,9 @@ public class SortUtils {
     public static long[] insertSort(long[] sorts){
         long m;
         for(int i=1;i<sorts.length;i++){
-            m=sorts[i];//Ҫ���������
-            int j=0; //���������ݵ��±�
-           for(j=i;j>0&&sorts[j-1]>=m;j--){ //0 ����i-1��Ϊ������õ�����  ����������һλ��������������ݽ��бȽϣ�ֱ��ѭ���ҳ������±�
+            m=sorts[i];//要插入的数据
+            int j=0; //待插入数据的下标
+           for(j=i;j>0&&sorts[j-1]>=m;j--){ //0 —（i-1）为已排序好的数组  从数组的最后一位依次与待插入数据进行比较，直到循环找出插入下表
                sorts[j]=sorts[j-1];
            }
            sorts[j]=m;

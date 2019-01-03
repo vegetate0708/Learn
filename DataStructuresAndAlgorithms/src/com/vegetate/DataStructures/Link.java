@@ -36,7 +36,7 @@ public class Link {
         return next;
     }
 
-    public void setLink(Link next) {
+    public void setNext(Link next) {
         this.next = next;
     }
 }

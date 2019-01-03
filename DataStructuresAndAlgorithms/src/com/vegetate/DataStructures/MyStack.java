@@ -47,7 +47,7 @@ public class MyStack {
        if( !isEmpty()){
            return arr[top--];
        }else{
-           System.out.print("ջ��Ϊ��");
+           System.out.print("栈已为空");
            return 0;
        }
    }
@@ -62,7 +62,7 @@ public class MyStack {
         myStack.push(16);
 
         while (!myStack.isEmpty()){
-            System.out.println("ȡ������"+myStack.pop());
+            System.out.println("取出数据"+myStack.pop());
         }
 
    }
