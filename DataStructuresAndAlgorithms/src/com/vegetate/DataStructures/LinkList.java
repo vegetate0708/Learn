@@ -18,7 +18,7 @@ package com.vegetate.DataStructures;
  */
 public class LinkList {
    private Link first;
-   private void insert(long value){
+   public void insert(long value){
       Link link=new Link(value);
       if(link==null){
          first=link;
@@ -26,5 +26,38 @@ public class LinkList {
          link.setNext(first);
          first=link;
       }
+   }
+   public void display(){
+      Link current=first;
+      while (current!=null){
+         System.out.println(current.getData());
+         current=current.getNext();
+      }
+
+   }
+
+   //查找节点
+   public Link find(long key){
+      Link current=first;
+      while (first.getData()!=key){
+         if (first.getNext()==null){
+            return null;
+         }
+         current=current.getNext();
+      }
+      return current;
+   }
+
+   public static void main(String[] args){
+      LinkList linkList=new LinkList();
+      linkList.insert(2);
+      linkList.insert(5);
+      linkList.insert(7);
+      linkList.insert(1);
+
+      linkList.display();
+
+      Link link=linkList.find(1);
+      System.out.print(link.getData());
    }
 }
