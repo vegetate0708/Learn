@@ -46,6 +46,25 @@ public class LinkList {
       current.setNext(link);
    }
 
+   //删除指定节点
+   public void delete(long key){
+      Link current=first;
+      Link ago=first;
+      while (current.getData()!=key){  // 如果没走循环，说明第一个数的值就是key
+         if (current.getNext()==null){ //如果循环到最后还没找到key说明不在链表里面
+            return;
+         }else {
+            ago=current;
+            current=current.getNext();
+         }
+      }
+      if (current==first){  //如果第一个值是key，删除后，第一个值就是他后面的
+         first=first.getNext();
+      }else {
+         ago.setNext(current.getNext());
+      }
+
+   }
    //查找节点
    public Link find(long key){
       Link current=first;
