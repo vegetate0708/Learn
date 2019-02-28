@@ -36,6 +36,16 @@ public class LinkList {
 
    }
 
+   public void insert(long value,int pos){
+      Link current=first;
+      for(int i=0;i<pos-1;i++){
+         current=current.getNext();
+      }
+      Link link=new Link(value);
+      link.setNext(current.getNext());
+      current.setNext(link);
+   }
+
    //查找节点
    public Link find(long key){
       Link current=first;
@@ -54,6 +64,8 @@ public class LinkList {
       linkList.insert(5);
       linkList.insert(7);
       linkList.insert(1);
+
+      linkList.insert(3,2);
 
       linkList.display();
 
